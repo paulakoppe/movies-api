@@ -59,7 +59,7 @@ class NotesController {
 
         await knex("movie_notes").where({ id }).delete();
 
-        return response.json();
+        return response.json({message: "Note deleted"});
     }
 
     async index(request, response) {
